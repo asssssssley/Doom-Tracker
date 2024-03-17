@@ -25,10 +25,8 @@
   right: 0px;
   bottom: 0px;
   left: 0px;
-  background-color: red;
-  /* box-shadow: 0 2px 5px red; */
+  background-color: #5865f2 !important;
   border-radius: 15px;
-
   height: 100%;
   display: flex;
   align-items: center;

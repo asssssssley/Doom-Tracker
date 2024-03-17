@@ -80,7 +80,7 @@ export default function FriendList() {
       className="u-lonely-ass"
       align="center"
     >
-      Looking a bit lonely here. Go make some friends! 🐸
+      Looking a bit lonely here. Go make some friends!
     </Typography>  
   )
     

@@ -85,7 +85,7 @@ export default function FriendList() {
       className="u-lonely-ass"
       align="center"
     >
-      Congratulations you have befriended everyone and become a BNOC! 🎉 
+      There are no more users to befriend.
     </Typography>  
   )
     

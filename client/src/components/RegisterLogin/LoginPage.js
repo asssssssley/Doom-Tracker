@@ -72,7 +72,7 @@ export default function LoginPage() {
   return (
     <>
       <div className="register-container">
-        <Typography variant="h2" sx={{ mb: 8 }}>
+        <Typography variant="h2" sx={{ mb: 8 }} class="login-title">
           Log in to Doom Tracker 💀
         </Typography>
 

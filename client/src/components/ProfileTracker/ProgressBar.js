@@ -42,7 +42,6 @@ const ProgressBar = ({ done }) => {
           style={ProgressBarPercentageBackgroundStyling}
         ></div>
         <div className="progress-done" style={ProgressBarPercentage}>
-          {/* {done}% */}
         </div>
       </div>
     </>
