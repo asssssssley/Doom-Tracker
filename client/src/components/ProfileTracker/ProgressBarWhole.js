@@ -1,16 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ProgressBar from "./ProgressBar";
 import ProgressDropdownList from "./ProgressDropdownList";
-import { white } from "@mui/material/colors";
 import ProgressBarDropdownButton from "@mui/material/IconButton";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Typography from "@mui/material/Typography";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
-import CompletedListDropdown from "./CompletedListDropdown";
 import DropdownButton from "@mui/material/IconButton";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
@@ -29,7 +24,6 @@ import "./ProgressTrackerStyling.css";
 import { styled, alpha } from "@mui/material/styles";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import Divider from "@mui/material/Divider";
 import Check from "@mui/icons-material/Check";
 import ListItemIcon from "@mui/material/ListItemIcon";
 
@@ -63,16 +57,11 @@ const StyledMenu = styled((props) => (
     "& .MuiMenuItem-root": {
       "& .MuiSvgIcon-root": {
         fontSize: 18,
-        // color: "#36393f",
         color: theme.palette.text.secondary,
         marginRight: theme.spacing(1.5),
       },
       "&:active": {
         backgroundColor: "#36393f",
-        // backgroundColor: alpha(
-        //   theme.palette.primary.main,
-        //   theme.palette.action.selectedOpacity
-        // ),
       },
     },
   },

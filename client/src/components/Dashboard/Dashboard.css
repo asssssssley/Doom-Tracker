@@ -335,16 +335,13 @@ body {
   margin-top: 0px !important;
 }
 
-.select-box {
-}
-
 .duration-box {
   width: 100px !important;
 }
 
 .time-picker {
   width: 140px;
-  margin-top: 23px !important;
+  margin-top: 3px !important;
 }
 
 .switch-box-text {

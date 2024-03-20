@@ -5,13 +5,20 @@ body {
 .register-container {
     display: flex;
     flex-direction: column;
-    width: 60vw;
+    width: 40vw;
     height: auto;
-    margin: 4rem auto;
+    margin: 15rem auto;
     border-radius: 0.4rem;
     padding: 3rem;
     background-color: #0f131a;
     color: #ffffff;
+}
+
+.login-title {
+    font-size: 3.5rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    color: #5865f2;
 }
 
 .form-container {
@@ -20,9 +27,16 @@ body {
 }
 
 .redirect-text {
-    font-size: 1rem;
-    margin-bottom: 4rem;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
     color: #5865f2;
     text-decoration: none;
-    width: 12rem;
+    /* width: 12rem; */
+}
+
+.register-title {
+    font-size: 2.6rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    color: #5865f2;
 }

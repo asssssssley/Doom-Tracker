@@ -1,11 +1,9 @@
-import { Fade, Typography, Grow, Slide } from "@mui/material";
+import { Typography, Grow, Slide } from "@mui/material";
 import React from "react";
 import { useEffect, useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import SkullVideo from "./blue fire skull.mov.mp4";
 import "./DoomFactor.css";
-import zIndex from "@mui/material/styles/zIndex";
-import FireVideo from "../BackgroundFire/background fire.mp4";
 import FireEmbersVideo from "./doom factor view background fire embers.mp4";
 
 import {
@@ -13,20 +11,12 @@ import {
   DialogTitle,
   DialogContent,
   DialogContentText,
-  DialogActions,
   Button,
-  CardMedia,
 } from "@mui/material";
-
-import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
 
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import Switch from "@mui/material/Switch";
 import Checkbox from "@mui/material/Checkbox";
-
-import AvatarProfileImage from "./testProfileImage.jpg";
 
 const DoomFactor = ({
   updateBackgroundFireShown,
@@ -55,13 +45,6 @@ const DoomFactor = ({
   const handleCloseOptionMenu = () => {
     setIsShownOptionMenu(false);
   };
-  // useEffect(() => {
-  //   fetch("http://localhost:5000/tasks/doomFactor")
-  //     .then((res) => {
-  //       return res.json();
-  //     })
-  //     .then((data) => console.log(data));
-  // }, []);
 
   const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;

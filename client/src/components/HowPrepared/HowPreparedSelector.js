@@ -4,8 +4,6 @@ import BlackSkullsvg from "./BlackSkullsvg";
 import WhiteSkullsvg from "./WhiteSkullsvg";
 import MrIncredibleUncanny from "./MrIncredibleUncannySkull.webp";
 import Box from "@mui/material/Box";
-import { IconButton } from "@mui/material";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import "./HowPrepared.css";
 
 const labels = {
@@ -109,12 +107,6 @@ const HowPreparedSelector = ({ userId, runUpdateTasks }) => {
         .then((res) => {
           return res.json();
         })
-        // .then((data) => setValue(data.doomRating.rating))
-        // .then(() => {
-        //   if (newValue !== value) {
-        //     value = newValue;
-        //   }
-        // })
         .then((data) => setValue(data.doomRating.rating))
 
         .then((data) => console.log(data.doomRating.rating))
@@ -155,12 +147,6 @@ const HowPreparedSelector = ({ userId, runUpdateTasks }) => {
               precision={0.5}
               value={getValue}
               getLabelText={getLabelText}
-              // onChange={(event, newValue) => {
-              //   setValue(newValue);
-              // }}
-              // onChangeActive={(event, newHover) => {
-              //   setHover(newHover);
-              // }}
               className="how-prepared-rating-selector"
               readOnly
             />
@@ -186,12 +172,6 @@ const HowPreparedSelector = ({ userId, runUpdateTasks }) => {
           </Button>
         )}
 
-        {/* <IconButton
-          className="how-prepared-dropdown-arrow"
-          onClick={handleClickDropdownSelector}
-        >
-          <ArrowDropDownIcon />
-        </IconButton> */}
         {maxDoomShown && (
           <div>
             <Rating

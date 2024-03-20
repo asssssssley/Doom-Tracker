@@ -1,9 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ProgressBarWhole from "./ProgressBarWhole";
-import { Button, Typography } from "@mui/material";
-import { styled } from "@mui/system";
 import "./ProgressTrackerStyling.css";
-import { useParams } from "react-router-dom";
 import { Divider } from "@mui/material";
 
 const ProfileTracker = ({ runUpdateTasks, dataTasks, id }) => {

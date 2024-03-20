@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { fabClasses, Typography } from "@mui/material";
+import React, { useState } from "react";
+import { Typography } from "@mui/material";
 
 import DoneOutlineIcon from "@mui/icons-material/DoneOutline";
-import ModeEditIcon from "@mui/icons-material/ModeEdit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton";
 import UndoIcon from "@mui/icons-material/Undo";
@@ -36,7 +35,6 @@ const ProgressDropdownListElement = ({
         _id: _id,
         completed: completed,
       }),
-      // qs: { _id: _id, completed: completed },
       credentials: "include",
     };
 
@@ -69,7 +67,7 @@ const ProgressDropdownListElement = ({
     <div /*className={completed ? "dropdown-list-element-fade-out" : ""}*/>
       <Typography variant="h6">{name}</Typography>
 
-      <Typography>Duration: {duration}</Typography>
+      <Typography>Duration: {duration / 3600} Hours</Typography>
       <Typography>Week: {week}</Typography>
       <Typography>
         Term {term}, {year}
@@ -78,9 +76,6 @@ const ProgressDropdownListElement = ({
         <div>
           <IconButton onClick={handleToggleCompletedIcon}>
             {toggleCompletedIcon}
-          </IconButton>
-          <IconButton>
-            <ModeEditIcon />
           </IconButton>
           <IconButton onClick={handleDeleteIcon}>
             <DeleteIcon />

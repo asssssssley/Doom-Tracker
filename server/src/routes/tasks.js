@@ -14,12 +14,15 @@ router.get("/get", async (req, res) => {
 
 // GET - /tasks/get/:id
 // Returns an array of all tasks
-// Brian Wang
 router.get("/get/:id", async (req, res) => {
-  const userId = req.params.id;
-  const tasksArray = await doomTasks.find({ userId: userId }).toArray();
-  console.log(tasksArray);
-  res.send(tasksArray);
+  try {
+    const userId = req.params.id;
+    const tasksArray = await doomTasks.find({ userId: userId }).toArray();
+    console.log(tasksArray);
+    res.send(tasksArray);
+  } catch (error) {
+    next(error);
+  }
 });
 
 // GET - /tasks/doomFactor
@@ -51,7 +54,6 @@ router.get("/doomFactor", async (req, res) => {
 
 // GET - /tasks/getOtherProfileImg
 // gets profile image of other users
-// Brian Wang
 router.get("/getOtherProfileImg", async (req, res, next) => {
   let userId = req.query.userId;
   console.log(userId);
@@ -75,7 +77,6 @@ router.get("/getOtherProfileImg", async (req, res, next) => {
 
 // GET - /tasks/getOtherUsername
 // gets username of other users
-// Brian Wang
 router.get("/getOtherUsername", async (req, res, next) => {
   try {
     let userId = req.query.userId;
@@ -97,7 +98,6 @@ router.get("/getOtherUsername", async (req, res, next) => {
 
 // GET - /tasks/getOtherDoomRating
 // gets doom rating of other users
-// Brian Wang
 router.get("/getOtherDoomRating", async (req, res, next) => {
   try {
     let userId = req.query.userId;

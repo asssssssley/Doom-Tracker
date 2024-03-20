@@ -4,12 +4,11 @@ import ProfilePageTitle from "./ProfilePageTitle/ProfilePageTitle";
 import ProfileTracker from "./ProfileTracker/ProfileTracker";
 import HowPrepared from "./HowPrepared/HowPrepared";
 import DoomFactor from "./DoomFactor/DoomFactor";
-import DoomBuddiesListButton from "./DoomBuddiesList/DoomBuddiesListButton";
 import "./ProfileStyling.css";
 import MiniDashboard from "./MiniDashboard/MiniDashboard";
 import BackgroundFire from "./BackgroundFire/BackgroundFire";
-import { Navigate, useParams, useNavigate } from "react-router-dom";
-import { Divider, Fade, Typography } from "@mui/material";
+import { useParams, useNavigate } from "react-router-dom";
+import { Divider, Typography } from "@mui/material";
 import ProfileSearchBar from "./DoomBuddies/ProfileSearchBar";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
@@ -25,7 +24,7 @@ const ProfileWrapper = () => {
   };
 
   const updateBackgroundFireShown = () => {
-    if (backgroundFireShown == false) {
+    if (backgroundFireShown === false) {
       setBackgroundFireShown(true);
     } else {
       setBackgroundFireShown(false);
@@ -81,13 +80,6 @@ const ProfileWrapper = () => {
           setDataTasks(data);
           console.log(data);
         })
-        // .then((dataTasks) => {
-        //   setDataTasks(
-        //     dataTasks.filter((task) => {
-        //       return task.userId === id;
-        //     })
-        //   );
-        // })
         .catch((error) => console.log(error));
     }
   }, [updateTasks, id]);
@@ -112,10 +104,6 @@ const ProfileWrapper = () => {
         .then((res) => {
           return res.json();
         })
-        // .then((data) => {
-        //   console.log("helloooooooooooooo");
-        //   console.log(data.doomFactor);
-        // })
         .then((data) => setDoomFactor(data.doomFactor));
     }
   }, [updateTasks]);
@@ -149,15 +137,12 @@ const ProfileWrapper = () => {
           doomFactor={doomFactor}
         />
       )}
-      {/* <div> */}
       <div className="profile-tracker-search-bar">
         <ProfileSearchBar runUpdateTasks={runUpdateTasks}></ProfileSearchBar>
       </div>
 
       <br />
       <ProfilePageTitle className="profile-page-title" />
-      {/* <ProfilePageTitle /> */}
-      {/* <div className="profile-doom-buddies-list-button"> */}
       {id === undefined ? (
         <div className="profile-doom-buddies-list-button">
           <Link to="../friends">
@@ -182,9 +167,9 @@ const ProfileWrapper = () => {
         updateCounterProfileWrapper={updateTasks}
       />
       <Divider>
-        <Typography variant="h3">{profileUsername}</Typography>
+        <Typography variant="h5">{profileUsername}</Typography>
       </Divider>
-      <Divider className="profile-section-divider">DOOM TRACKER</Divider>
+      <Divider className="profile-section-divider"></Divider>
       <div className="profile-mini-dashboard-tracker">
         <div className="profile-mini-dashboard">
           <MiniDashboard dataTasks={dataTasks} userId={id} />
@@ -199,7 +184,7 @@ const ProfileWrapper = () => {
         </div>
       </div>
 
-      <Divider className="profile-section-divider">DOOM SELECTOR</Divider>
+      <Divider className="profile-section-divider"></Divider>
       <div className="how-prepared-profile">
         <HowPrepared userId={id} runUpdateTasks={runUpdateTasks} />
       </div>

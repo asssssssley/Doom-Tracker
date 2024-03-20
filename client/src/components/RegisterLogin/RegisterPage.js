@@ -98,7 +98,11 @@ export default function RegisterPage() {
   return (
     <>
       <div className="register-container">
-        <Typography variant="h2" sx={{ mb: 8 }}>
+        <Typography
+          variant="h2"
+          sx={{ mb: 8, fontWeight: "bold" }}
+          class="register-title"
+        >
           Create your Doom Tracker Account 💀
         </Typography>
 

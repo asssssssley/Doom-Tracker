@@ -6,11 +6,7 @@ export default function LandingPage() {
   return (
     <>
       <div class="landing-container">
-        <img
-          src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/microsoft/310/skull_1f480.png"
-          alt="skull"
-          className="landing-skull"
-        ></img>
+        <Typography class="landing-skull">💀</Typography>
         <Typography
           variant="h2"
           class="landing-title"
@@ -31,13 +27,10 @@ export default function LandingPage() {
         </Link>
         <Divider
           variant="middle"
-          style={{ width: '100%' }}
+          style={{ width: "100%" }}
           class="login-divider"
         />
-        <Typography
-          variant="h2"
-          class="landing-text"
-        >
+        <Typography variant="h2" class="landing-text">
           Don't have an account?
         </Typography>
         <Link to="/register">
@@ -45,12 +38,12 @@ export default function LandingPage() {
             href="#text-buttons"
             className="landing-button-2"
             sx={{ fontWeight: "normal" }}
-            style={{ textTransform: 'none' }}
+            style={{ textTransform: "none" }}
           >
             Sign up for Doom Tracker
           </Button>
         </Link>
       </div>
     </>
-  )
+  );
 }
