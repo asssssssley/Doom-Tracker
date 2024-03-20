@@ -234,7 +234,7 @@ router.get("/getProfileImg", async (req, res, next) => {
 // GET - /users/getUsername
 // gets username of logged in user
 router.get("/getUsername", async (req, res, next) => {
-   try {
+  try {
     let userObj = req.authUser;
     const profileDocument = await doomUsers.findOne({ _id: userObj._id });
     res.send({ username: profileDocument.username });

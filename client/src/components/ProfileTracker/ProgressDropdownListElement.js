@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { fabClasses, Typography } from "@mui/material";
+import React, { useState } from "react";
+import { Typography } from "@mui/material";
 
 import DoneOutlineIcon from "@mui/icons-material/DoneOutline";
-import ModeEditIcon from "@mui/icons-material/ModeEdit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton";
 import UndoIcon from "@mui/icons-material/Undo";
@@ -36,7 +35,6 @@ const ProgressDropdownListElement = ({
         _id: _id,
         completed: completed,
       }),
-      // qs: { _id: _id, completed: completed },
       credentials: "include",
     };
 

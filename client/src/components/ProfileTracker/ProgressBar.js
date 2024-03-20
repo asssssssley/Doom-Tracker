@@ -1,4 +1,3 @@
-import { width } from "@mui/system";
 import React, { useEffect } from "react";
 import { useState } from "react";
 import "./ProgressBarStyling.css";
@@ -41,8 +40,7 @@ const ProgressBar = ({ done }) => {
           className="progress-done-background"
           style={ProgressBarPercentageBackgroundStyling}
         ></div>
-        <div className="progress-done" style={ProgressBarPercentage}>
-        </div>
+        <div className="progress-done" style={ProgressBarPercentage}></div>
       </div>
     </>
   );

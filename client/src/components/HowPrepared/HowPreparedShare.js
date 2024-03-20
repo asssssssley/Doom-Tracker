@@ -1,20 +1,13 @@
 import React from "react";
 import { useState } from "react";
-import { Button, Icon, IconButton } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
 import ShareIcon from "@mui/icons-material/Share";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import testImage from "./testImage.jpg";
 import { Snackbar } from "@mui/material";
-import { Link } from "react-router-dom";
 
-import {
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogContentText,
-  DialogActions,
-} from "@mui/material";
+import { Dialog, DialogTitle, DialogContent } from "@mui/material";
 
 const HowPreparedShare = () => {
   const [shareDropdownOpen, setShareDropdownOpen] = useState(false);

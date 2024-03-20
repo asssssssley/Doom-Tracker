@@ -6,11 +6,7 @@ export default function LandingPage() {
   return (
     <>
       <div class="landing-container">
-        <Typography
-          class="landing-skull"
-        >
-          💀
-        </Typography>
+        <Typography class="landing-skull">💀</Typography>
         <Typography
           variant="h2"
           class="landing-title"
@@ -31,13 +27,10 @@ export default function LandingPage() {
         </Link>
         <Divider
           variant="middle"
-          style={{ width: '100%' }}
+          style={{ width: "100%" }}
           class="login-divider"
         />
-        <Typography
-          variant="h2"
-          class="landing-text"
-        >
+        <Typography variant="h2" class="landing-text">
           Don't have an account?
         </Typography>
         <Link to="/register">
@@ -45,12 +38,12 @@ export default function LandingPage() {
             href="#text-buttons"
             className="landing-button-2"
             sx={{ fontWeight: "normal" }}
-            style={{ textTransform: 'none' }}
+            style={{ textTransform: "none" }}
           >
             Sign up for Doom Tracker
           </Button>
         </Link>
       </div>
     </>
-  )
+  );
 }
